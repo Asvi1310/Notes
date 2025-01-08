@@ -1,3 +1,3 @@
-# Core Java Interview Notes
+# Core Java
 
 
