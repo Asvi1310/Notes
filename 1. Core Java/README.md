@@ -146,9 +146,51 @@
  * The stringBuffer is synchronized which is thread-safe.
  * Perfomance is slower than stringBuilder.
 
-  ![image](https://github.com/user-attachments/assets/b8450dd9-6e5b-4977-adf2-74ef29b1becc)
+    ![image](https://github.com/user-attachments/assets/b8450dd9-6e5b-4977-adf2-74ef29b1becc)
 
  * **StringBuilder:** StringBuilder is mutable and its values are stored in heap. It is not thresd-safe so it is faster in performance.
 
 ### 15. Public v/s Private access modifier
-* **Public Access Modifier:** 
+* Methods and instance variables are known as members.
+* **Public Access Modifier:**
+* Public members are visible in the same package as well as the outside package that is for other packages.
+* **Private Access Modifier:**
+* Private members are visible in the same class only and not for the other classes in the same package as well as classes in the outside packages.
+
+### 16. Default v/s Protected access modifier
+* **Default:** Methods and variables declared in a class without any access specifiers are called default.
+  
+  ![image](https://github.com/user-attachments/assets/7dbbf4c8-19e5-4a4e-ae03-05018c542fed)
+* **Protected:** Protected is the same as Default but if a class extends then it is visible even if it is outside the package.
+
+  ![image](https://github.com/user-attachments/assets/ac67f02b-fa39-42bf-837f-04e91f76e816)
+
+### 17. HashMap v/s HashTable
+| HashMap | HashTable |
+|:--------|:----------|
+| HashMap is not synchronized | HashTable is synchronized |
+| HashMap is not thread safe | HashTable is thread-safe |
+| Iterator is used to iterate the values | Enumerator is used to iterate the values |
+| Allows one null key and multiple null values | Doesn't allow anything that is null |
+| Performance is higher than hashtable | Performance is slow |
+
+### 18. HashSet v/s TreeSet 
+| HashSet | Treeset |
+|:-------- |:---------|
+| Inserted elements are in random order | Maintains the elements in sorted order |
+| Can able to store null objects | couldn't store the null objects |
+| performance is fast | Performance is slow |
+
+### 19. HashMap v/s HashSet
+ | HashMap | HashSet |
+ |:---------|:--------|
+ | HashMap stores key-value pair | HashSet stores objects |
+ | HashMap does not allow duplicate keys but duplicate values are allowed | HashSet does not allow duplicate values |
+ | HashMap can contains single null key and multiple null values | HashSet can contain  a single null value |
+ | HashMap uses the put() method to add elements in the Map | HashSet uses the add() to add element to the Set |
+
+ ### 20. Abstract class v/s Interface
+ 
+
+  
+
