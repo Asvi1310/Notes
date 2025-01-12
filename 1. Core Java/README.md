@@ -190,7 +190,13 @@
  | HashMap uses the put() method to add elements in the Map | HashSet uses the add() to add element to the Set |
 
  ### 20. Abstract class v/s Interface
+ | Abstract Class  | Interface |
+ |:----------------|:--------------|
+ | Abstract class can have abstract and non-abstract method | Interface can have only abstract method |
+ | Abstract class does not support multiple inheritance | Interface supports multiple inheritance |
+ | Abstract class can provide implementation of interface | Interface can't provide implementation of abstract class |
+ | Abstract keyword is used to declare abstract class | Interface keyword is used to declare interface |
+ | Abstract class can be extended using keyowrd 'extends' | Interface can be implemented using keyword 'Implement' |
  
-
   
 
