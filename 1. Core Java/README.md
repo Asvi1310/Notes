@@ -73,4 +73,82 @@
  * Use public accessor method get and set.
 
 ### 9. Polymorphism
+ * If a task is perfomed in different ways is known as polymorphism.
+ * It can be achived by using method overloading and overriding.
+ * A single object can refer to super class or sub class depending upon reference type is called polymorphism.
+
+  ![image](https://github.com/user-attachments/assets/d2d62965-ed0d-4b71-bec8-f5122fe0184b)
+ * Above, Using manipulation referene type we can call the Addition class add() method.
+
+ * **Types of polymorphism**
+ * RunTime Polymorphism
+ * CompileTime Polymorphism
+
+ ### 10. Method Overloading v/s Method Overriding
+ |   Method overloading |  Method Overriding  |
+ |:---------------------|:--------------------|
+ | Method overloading increases the readability of the program | Method overrriding provides specific implementation of the method that is already provided by parent class|
+ |Method overloading is performed within a class | Method overrriding is performed within two classes and have IS-A relationship |
+ | In case of method overloading, parameter must be different |  In case of method overriding, parameter must be same |
+ | Method loading is an example of compiletime polymorphism | Mehtod overrriding is an example of run time polymorphism |
+
+ ### 11. Compiletime Polymorphism v/s Runtime Polymorphism
+ | Compiletime Polymorphism | Runtime Polymorphism |
+ |:------------------------- | :--------------------|
+ | In ctp, call is resolved by compiler | In rtp, call is not resolved by compiler |
+ | CTP is known as early binding and static binding | RTP is known as dynamic binding and late binding |
+ | Overloading in ctp, one method shares the same name with diff parameters, signature and return type | Overriding in rtp, Have the same name with same parameter or signature and same return type but associated in a class and its subclass.
+ | It provides fast execution |  It provies slow execution |
+
+ * **Overloading**
    
+   ![image](https://github.com/user-attachments/assets/3a0a101d-233f-44fc-ab39-a451fe5389bc)
+ * Here the add() method has different parameters in the Addition class is overloaded in the same class as with the super-class.
+
+ * **Overriding**
+   
+   ![image](https://github.com/user-attachments/assets/328fcd0c-bec3-4756-b557-058af0535c89)
+   * addition.add() method calls the add() method in the Sub-class and not the parent class. So it overrides the Super-class method and is known as Method Overriding.
+
+ ### 12. Abstraction 
+ * Abstraction is the process of hiding implementation details and showing only funtionality to the user. (e.g process of phone)
+ * **There are two ways to achieve abstraction**
+ * **Abstract class:** A class which is declared with abstract keyword is known as abstract class. It can have abstract and non-abstract methods.
+
+   ![image](https://github.com/user-attachments/assets/ce11511b-0e9f-42c0-abee-9045df5e17f7)
+
+ * **Interface:** An interface is a blueprint of a class. It has static constants and abstract methods. Interface in java is a mechanism to achieve abstraction.
+* An interface is a template that has only method declarations and not the method implementation.
+
+  ![image](https://github.com/user-attachments/assets/2b0fc47e-b6ff-46b5-b83b-fbc60a145229)
+  
+  ![image](https://github.com/user-attachments/assets/bfad4f1e-e4f2-46b0-bce4-44aa54d8ef49)
+
+ * **Why we use interface**
+ * To achieve abstraction
+ * To support funtionality of multiple inheritance.
+ * To achieve loose coupling.
+
+ ### 13. Array v/s Arraylist
+ | Array | ArrayList |
+ |:-------|:---------|
+ | Array is a fixed length data structure and size should be given at the time of array declaration | Arralylist is a variable length collection class|
+ |Array can store primitives and objects in java | Arraylist can store only objects in java|
+ | Array length can't be changes once it is created | ArrayList can be changed |
+ | Need to specify an index to put an object into array. e.g name[1] = “book” | No index required. e.g name.add(“book”) |
+
+ ### 14. String v/s StringBuilder v/s StringBuffer
+  * **String:** It is immutable and string variables are stored in constant string pool. Once the string references changes the old value that exists in constant string pool, it can't be erased.
+
+    ![image](https://github.com/user-attachments/assets/e6faf05b-1704-4db7-9a77-47a979367c29)
+
+ * **StringBuffer:** StringBuffer is mutable. String values are stored in stack and if the values are changed then the new value replaces the old value.
+ * The stringBuffer is synchronized which is thread-safe.
+ * Perfomance is slower than stringBuilder.
+
+  ![image](https://github.com/user-attachments/assets/b8450dd9-6e5b-4977-adf2-74ef29b1becc)
+
+ * **StringBuilder:** StringBuilder is mutable and its values are stored in heap. It is not thresd-safe so it is faster in performance.
+
+### 15. Public v/s Private access modifier
+* **Public Access Modifier:** 
