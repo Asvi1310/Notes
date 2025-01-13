@@ -198,6 +198,73 @@
  | Abstract keyword is used to declare abstract class | Interface keyword is used to declare interface |
  | Abstract class can be extended using keyowrd 'extends' | Interface can be implemented using keyword 'Implement' |
  
-### 21. Collectioons in java
+### 21. Collections in java
+ * Collection is a framework that is designed to store the objects and manipulate the design to store the objects.
+ * **Collections are used to perform the following operations:**
+ * Searching
+ * Sorting
+ * Manipulation
+ * Insertion
+ * Deletion
+ * A group of objects is known as collections. All the classes and interfaces for collecting are available in java util package.
 
+### 22. Classes and Interfaces are available in collections
+ * **Interfaces**
+ * Collection
+ * List
+ * Set
+ * Map
+ * Sorted Set
+ * Sorted Map
+ * Queue
+ * **Classes**
+ * Lists
+ * ArrayList
+ * Vector
+ * Linked List
+ * **Sets**
+ * HashSet
+ * Linked HashSet
+ * TreeSet
+ * **Maps**
+ * HashMap
+ * HashTable
+ * TreeMap
+ * Linked Hashed Map
+ * **Queue**
+ * Priority Queue
 
+### 23. Ordered v/s Sorted
+ * **Ordered:-** It means the values that are stored in a collection is based on the values that are added to the collection. So we can iterate the values from the collection in a specific order.
+ * **Sorted:-** Sorted mechanisms can be applied internally ox externally so that the group objects sorted in a particular collection is based on the properties of the objects.
+### 24. Explain the different lists available in the collection.
+* Values added to the list are based on the index position and it is ordered by index position. Duplicates are allowed.
+* **ArrayList:-**
+* It is an ordered collection by index and not sorted.
+* It implements the random access interface.
+
+  ![image](https://github.com/user-attachments/assets/95a805d0-56e7-4c29-a9cc-85b6de04fc1b)
+  
+* **Vector:-**
+* It is same as ArrayList
+* Vector methods are synchronized
+* Vector also maintains the insertion order and accepts the duplicates.
+* It also random access.
+* Thread safety usually causes performacen hit.
+![image](https://github.com/user-attachments/assets/5975a2d9-2881-47be-b1e0-4a394f7a0d46)
+
+* **Linked List:-**
+* Elements are doubly linked to one another
+* Performance is slower than ArrayList
+* Good choice for insertion and deletion
+* Maintains the insertion order and accepts the duplicates.
+* In Java 5.0, it supports common queue methods peek(),pool(),offer() etc.
+
+![image](https://github.com/user-attachments/assets/86de4454-bcc0-4f94-a4d6-f00793fe06f1)
+
+### 25. Explain about Set and their types in a collection.
+* Set cares about uniqueness. it does not allow duplications. Here 'equals()' method is used to determine whether two objects are identical or not.
+* **HashSet:-**
+* Unordered and Unsorted .
+* Uses the hashcode of the object to insert the values.
+* use this when the requirement is "no duplicates and don't care about the order".
