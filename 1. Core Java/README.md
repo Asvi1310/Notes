@@ -237,8 +237,10 @@
 ### 23. Ordered v/s Sorted
  * **Ordered:-** It means the values that are stored in a collection is based on the values that are added to the collection. So we can iterate the values from the collection in a specific order.
  * **Sorted:-** Sorted mechanisms can be applied internally ox externally so that the group objects sorted in a particular collection is based on the properties of the objects.
+   
 ### 24. Explain the different lists available in the collection.
 * Values added to the list are based on the index position and it is ordered by index position. Duplicates are allowed.
+  
 * **ArrayList:-**
 * It is an ordered collection by index and not sorted.
 * It implements the random access interface.
@@ -251,7 +253,7 @@
 * Vector also maintains the insertion order and accepts the duplicates.
 * It also random access.
 * Thread safety usually causes performacen hit.
-![image](https://github.com/user-attachments/assets/5975a2d9-2881-47be-b1e0-4a394f7a0d46)
+  ![image](https://github.com/user-attachments/assets/5975a2d9-2881-47be-b1e0-4a394f7a0d46)
 
 * **Linked List:-**
 * Elements are doubly linked to one another
@@ -260,11 +262,61 @@
 * Maintains the insertion order and accepts the duplicates.
 * In Java 5.0, it supports common queue methods peek(),pool(),offer() etc.
 
-![image](https://github.com/user-attachments/assets/86de4454-bcc0-4f94-a4d6-f00793fe06f1)
+  ![image](https://github.com/user-attachments/assets/86de4454-bcc0-4f94-a4d6-f00793fe06f1)
 
 ### 25. Explain about Set and their types in a collection.
 * Set cares about uniqueness. it does not allow duplications. Here 'equals()' method is used to determine whether two objects are identical or not.
+  
 * **HashSet:-**
 * Unordered and Unsorted .
 * Uses the hashcode of the object to insert the values.
 * use this when the requirement is "no duplicates and don't care about the order".
+* It does not follow any insertion order. Duplicates are not allowed.
+  
+  ![image](https://github.com/user-attachments/assets/bc6fc37a-173e-430c-ad87-85b0142ff52f)
+
+* **Linked HashSet**
+* An ordered version of the hash set is known as linked hash set.
+* Maintains a doubly linked list of all the elements.
+* Use linked hash set when an iteration order is required.
+* It maintains the insertion order in which they have been added to set. Duplicates are not allowed.
+  
+  ![image](https://github.com/user-attachments/assets/10c2ed54-060a-4905-becb-20255212dc45)
+
+* **TreeSet**
+* It is one of two sorted collections.
+* Uses the 'Read-Black' tree structure and guarantees that the elements will be in ascending order.
+* we can construct a tree set with the constructor by using a comparable or comparator.
+* TreeSet sorts the elements in ascending order and duplicates are not allowed.
+  
+  ![image](https://github.com/user-attachments/assets/f9de95f7-ee31-46c5-9f42-ad665e9e6aea)
+ 
+### 26. Explain about Map and its types.
+* Map cares about the unique identifier. we can map a unique key to a specific value. It is key-value pair. We can search a value based on the key. Like the set,  the map also uses the 'equals()' method to determine whether two keys are the same or different.
+  
+* **HashMap**
+* unordered and unsorted map.
+* HashMap is a good choice  when we don't care about the order.
+* It allows one null key and multiple null values.
+* Duplicate keys are not allowed.
+* It does not maintain any insertion order and is unsorted.
+  
+  ![image](https://github.com/user-attachments/assets/d82f68c7-df3e-4435-9e9a-082cf8ece731)
+
+* **HashTable**
+* Like the vector key, methods of class are synchronised.
+* Thread safety and therefore slows the performance.
+* It does not allow anything that is null.
+* Duplicate keys are not allowed.
+  
+  ![image](https://github.com/user-attachments/assets/6ca1ead4-0d3c-410c-8f58-838ae73beea3)
+
+* **Linked HashMap**
+* Maintain insertion order and slower than hashmap.
+* Faster iteration.
+* Duplicate keys are not allowed.
+
+  ![image](https://github.com/user-attachments/assets/14fe17b9-cdb2-4d02-ae40-63b1a153b7fe)
+
+
+
