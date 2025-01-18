@@ -362,4 +362,84 @@
  * It is non-static method . The join() method has an overloaded version. So we can mention the time duration in join() method also ".s".
 
  ### 33. What does the yield method of the Thread class do?
+ * A yield() method moves the currently running thread to a runnable state and allows the other thread for execution so that equal priority threads have a chance to run. It is a static method. It doesn't release any lock. Yield() method moves the thread back to the runnable state only and the thread to sleep(), wait() or block.
+   ![image](https://github.com/user-attachments/assets/b9602de6-ff2a-4030-9ad5-48cb01fc5949)
+   
+### 34. Explain abour wait() method.
+ * wait() method used to make the thread to wait in the waiting pool. When the wait() method is executed during a thread execution thne immediately the thread gives up the lock on the object and goes to the waiting pool. Wait() method tells the thread to wait for a given amount of time. Then the thread will wake up after notify() or notify All()  method is called.
+   Wait() method and the other above mentioned methods do not give lock on the object immediately until the currently executing thread completes the synchronized code. It is mostly used in synchronization.
+   ![image](https://github.com/user-attachments/assets/4e9f75cc-d9ca-4621-ae80-ea3b126abd76)
+### 35. Notify v/s Notify All()
+   | Notify | Notify All |
+   |:-------|:-----------|
+   |This method is used to send a signal to wake up a single thread in the waiting pool. | This method sends a signal to wake up all the threads in the waiting pool.|
+### 36. How to stop a thread in java ? Explain about sleep() method in a thread?
+ * We can stop a thread by using below folloiwing thread method.
+ * Sleeping
+ * Waiting
+ * Blocked
+ * **Sleeping:** Sleep() method is used to sleep the currently executing thread for the given amount of time. Once the thread is wake up it can move to the runnable state so sleep() method is used to delay the execution for some period.
+ * It is static method.
+  ![image](https://github.com/user-attachments/assets/2cda8655-8bd5-4cbf-b26f-02fcb34ab44e)
+### 37. When to use Runnable interface v/s Thread class in java?
+ * If we need our class to extend some other classes other than the thread then we can go with the runnable interface because in java we can extend only one class.
+ * If we are not going to extend any class then we can extend the thread class.
+
+### 38. Start() v/s Run() method of thread class.
+ * Start method creates a new thread and code inside the run() method is executed in the new thread. If we directly called the run() method then a new thread is not created and the currently executing thread will continue to execute the run() method.
+
+### 39. What is multithreading.
+ * Multithreads are executed simultaneously. Each thread starts its own stack based on the flow or priority of the threads.
+    ![image](https://github.com/user-attachments/assets/bd9b7514-d739-47cc-9836-f69745c0d647)
+* Once the execution reaches , t.start() line then a new thread is created and the new stack for the thread is also created. Now, JVM switches to the new thread and the main thread are back to the runnable state.
+   ![image](https://github.com/user-attachments/assets/a6c7a896-81b7-4452-ad4a-c364854aee0c)
+* Once the run method has completed then JVM switches back to the main thread and the user thread has completed the task and stack was disapeared. JVM switches b/w each thread until both the threads are completed. This is called Multi-Threading.
+
+### 40. Explain the thread life cycle in Java.
+* Explain the thread life cycle in Java:
+* New
+* Runnable
+* Running
+* Non-Runnable(Blocked)
+* Terminated
+  ![image](https://github.com/user-attachments/assets/116b9c01-582f-4d45-91d9-0fde8772a2f3)
+* **New:**  In New state, a Thread instance has been created but start () method is not yet invoked. Now the thread is not considered alive.
+* **Runnable:** The Thread is in the runnable state after the invocation of the start () method, but before the run () method is invoked. But a thread can also return to the runnable state from waiting/sleeping. In this state, the thread is considered alive.
+* **Ruuning:** The thread is in a running state after it calls the run () method. Now the thread begins the execution.
+* **Non-Runnable:** The thread is alive but it is not eligible to run. It is not in the runnable state but also, it will return to the runnable state after some time. Example: wait, sleep, block.
+* **Terminated:** Once the run method is completed then it is terminated. Now the thread is not alive.
+
+### 41: What is synchronization?
+* Synchronization makes only one thread to access a block of code at a time. If multiple threads accesses the block of code, then there is a chance for inaccurate results at the end. To avoid this issue, we can provide synchronization for the sensitive block of codes.
+* The synchronized keyword means that a thread needs a key in order to access the synchronized code.
+* Locks are per objects. Every Java object has a lock. A lock has only one key. A thread can access a synchronized method only if the thread can get the key to the objects to lock.
+* For this, we use the “Synchronized” keyword.
+  ![image](https://github.com/user-attachments/assets/c0a77c51-18cc-45f2-9098-80ab726342d5)
+  
+### 42. What is meant by Serialization?
+* Converting a file into a byte stream is known as Serialization. The objects in the file are converted to bytes for security purposes. For this, we need to implement a java.io.Serializable interface. It has no method to define.
+* Variables that are marked as transient will not be a part of the serialization. So we can skip the serialization for the variables in the file by using a transient keyword.
+
+### 43. What is the purpose of a transient variable?
+* Transient variables are not part of the serialization process. During deserialization, the values of the transient variables are set to the default value. It is not used with static variables.
+
+### 44. Which methods are used during the Serialization and Deserialization process?
+* ObjectOutputStream and ObjectInputStream classes are higher level java.io. package. We will use them with lower level classes FileOutputStream and FileInputStream.
+* ObjectOutputStream.writeObject —->Serialize the object and write the serialized object to a file.
+* ObjectInputStream.readObject —> Reads the file and deserializes the object.
+* To be serialized, an object must implement the serializable interface. If superclass implements Serializable, then the subclass will automatically be serializable.
+
+### 45. What is the purpose of a Volatile Variable?
+* Volatile variable values are always read from the main memory and not from thread’s cache memory. This is used mainly during synchronization. It is applicable only for variables. E.G volatile int number;
+### 46. Serialization v/s Deserialization
+  |Serialization | Deserialization|
+  |:-------------|:--------------|
+  |Serialization is the process which is used to convert the objects into byte stream | Deserialization is the opposite process of serialization where we can get the objects back from the byte stream.|
+  | An object is serialized by writing it an ObjectOutputStream. | An object is deserialized by reading it from an ObjectInputStream. |
+
+### 47. What is SerialVersionUID?
+ * Whenever an object is Serialized, the object is stamped with a version ID number for the object class. This ID is called the  SerialVersionUID. This is used during deserialization to verify that the sender and receiver that are compatible with the Serialization.
+
+
+
 
