@@ -339,6 +339,7 @@
   ![image](https://github.com/user-attachments/assets/1c25f444-66da-45b3-ac24-3090eae90cac)
   
 * **By declaring throws keyword:**
+* At the end of the method, we can declare the exception using throws keyword.
   ![image](https://github.com/user-attachments/assets/badee970-83c4-4dc0-85a2-06251edb62dc)
   
 ### 30. What is Thread.
@@ -356,9 +357,9 @@
  ### 32. Explain about join() method.
  * Join method() is used to join one thread with the end of the currently running thread.
    ![image](https://github.com/user-attachments/assets/225d0271-1af3-4210-97e5-4e741f3e5379)
-* Based on the above code, the main method has started the execution. When it reaches the code t.start() then 'thread t' starts the own stacks for the execution. JVM Switches b/w the main thread and ' thread t'.
-* Once it reaches the code t.join() then 'thread t' alone is executed and completes its task then only the main thread start the execution.
-* It is non-static method . The join() method has an overloaded version. So we can mention the time duration in join() method also ".s".
+ * Based on the above code, the main method has started the execution. When it reaches the code t.start() then 'thread t' starts the own stacks for the execution. JVM Switches b/w the main thread and ' thread t'.
+ * Once it reaches the code t.join() then 'thread t' alone is executed and completes its task then only the main thread start the execution.
+ * It is non-static method . The join() method has an overloaded version. So we can mention the time duration in join() method also ".s".
 
- 
-i
+ ### 33. What does the yield method of the Thread class do?
+
