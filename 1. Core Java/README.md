@@ -336,14 +336,17 @@
 ### 29. What are different ways to handle exception ?
 * **Using try/Catch:**
 * The risky code is surrounded by try block. If an exception occurs then it is caught by catch block which is followed by try block.
+  
   ![image](https://github.com/user-attachments/assets/1c25f444-66da-45b3-ac24-3090eae90cac)
   
 * **By declaring throws keyword:**
 * At the end of the method, we can declare the exception using throws keyword.
+  
   ![image](https://github.com/user-attachments/assets/badee970-83c4-4dc0-85a2-06251edb62dc)
   
 ### 30. What is Thread.
 * In Java, the flow of execution is called Thread. Every java program has at least one thread called the main thread, the main thread is created by JVM. The user can define their own threads by extending the Thread Class or implementing the runnable interface. Threads are executed concurrently.
+  
   ![image](https://github.com/user-attachments/assets/859e90ef-13a0-4ab5-83b5-12ed2e148689)
 
 ### 31. How do you make a thread in java?
@@ -352,23 +355,29 @@
  * The disadvantage of using a thread class is that we can not extend any other classes because we have already extended the thread class. we can overload the run() method in our class.
  * **Implement Runnable Interface:**
  * Another way is by implementing the runnable interface. For that, We should provide the implementation for run() method which is defined in the interface.
+   
    ![image](https://github.com/user-attachments/assets/306b41ea-ac1f-45fb-a7a2-f1f568b1022f)
 
  ### 32. Explain about join() method.
  * Join method() is used to join one thread with the end of the currently running thread.
+   
    ![image](https://github.com/user-attachments/assets/225d0271-1af3-4210-97e5-4e741f3e5379)
+   
  * Based on the above code, the main method has started the execution. When it reaches the code t.start() then 'thread t' starts the own stacks for the execution. JVM Switches b/w the main thread and ' thread t'.
  * Once it reaches the code t.join() then 'thread t' alone is executed and completes its task then only the main thread start the execution.
  * It is non-static method . The join() method has an overloaded version. So we can mention the time duration in join() method also ".s".
 
  ### 33. What does the yield method of the Thread class do?
  * A yield() method moves the currently running thread to a runnable state and allows the other thread for execution so that equal priority threads have a chance to run. It is a static method. It doesn't release any lock. Yield() method moves the thread back to the runnable state only and the thread to sleep(), wait() or block.
+   
    ![image](https://github.com/user-attachments/assets/b9602de6-ff2a-4030-9ad5-48cb01fc5949)
    
 ### 34. Explain abour wait() method.
  * wait() method used to make the thread to wait in the waiting pool. When the wait() method is executed during a thread execution thne immediately the thread gives up the lock on the object and goes to the waiting pool. Wait() method tells the thread to wait for a given amount of time. Then the thread will wake up after notify() or notify All()  method is called.
    Wait() method and the other above mentioned methods do not give lock on the object immediately until the currently executing thread completes the synchronized code. It is mostly used in synchronization.
+   
    ![image](https://github.com/user-attachments/assets/4e9f75cc-d9ca-4621-ae80-ea3b126abd76)
+   
 ### 35. Notify v/s Notify All()
    | Notify | Notify All |
    |:-------|:-----------|
@@ -380,7 +389,9 @@
  * Blocked
  * **Sleeping:** Sleep() method is used to sleep the currently executing thread for the given amount of time. Once the thread is wake up it can move to the runnable state so sleep() method is used to delay the execution for some period.
  * It is static method.
+   
   ![image](https://github.com/user-attachments/assets/2cda8655-8bd5-4cbf-b26f-02fcb34ab44e)
+  
 ### 37. When to use Runnable interface v/s Thread class in java?
  * If we need our class to extend some other classes other than the thread then we can go with the runnable interface because in java we can extend only one class.
  * If we are not going to extend any class then we can extend the thread class.
@@ -390,9 +401,13 @@
 
 ### 39. What is multithreading.
  * Multithreads are executed simultaneously. Each thread starts its own stack based on the flow or priority of the threads.
+   
     ![image](https://github.com/user-attachments/assets/bd9b7514-d739-47cc-9836-f69745c0d647)
+   
 * Once the execution reaches , t.start() line then a new thread is created and the new stack for the thread is also created. Now, JVM switches to the new thread and the main thread are back to the runnable state.
+  
    ![image](https://github.com/user-attachments/assets/a6c7a896-81b7-4452-ad4a-c364854aee0c)
+  
 * Once the run method has completed then JVM switches back to the main thread and the user thread has completed the task and stack was disapeared. JVM switches b/w each thread until both the threads are completed. This is called Multi-Threading.
 
 ### 40. Explain the thread life cycle in Java.
