@@ -402,7 +402,9 @@
 * Running
 * Non-Runnable(Blocked)
 * Terminated
+  
   ![image](https://github.com/user-attachments/assets/116b9c01-582f-4d45-91d9-0fde8772a2f3)
+  
 * **New:**  In New state, a Thread instance has been created but start () method is not yet invoked. Now the thread is not considered alive.
 * **Runnable:** The Thread is in the runnable state after the invocation of the start () method, but before the run () method is invoked. But a thread can also return to the runnable state from waiting/sleeping. In this state, the thread is considered alive.
 * **Ruuning:** The thread is in a running state after it calls the run () method. Now the thread begins the execution.
