@@ -318,5 +318,47 @@
 
   ![image](https://github.com/user-attachments/assets/14fe17b9-cdb2-4d02-ae40-63b1a153b7fe)
 
+* **TreeMap**
+* Sorted Map
+* Like TreeSet, we can construct a sort order with constructor.
+* It is sorted in ascending order based on the key.
+* Duplicate keys are not allowed.
+  
+  ![image](https://github.com/user-attachments/assets/2043dc54-6dca-4759-994a-91fb0e802c19)
+  
+### 27. Explain the priority Queue. 
+ * **Priority Queue:** Linked list has been enhanced to implement the Queue Interface. Queues can be handled with a linked list.The purpose of queue is "Priority-in", priority-out". Hence, elements are ordered either naturally or according to the comparator. The elements ordering represents their relative priority.
 
+ ### 28. Types of Execption
+ * **Checked Execption:** These exceptions are checked by the compiler at the time of compilation. Classes that extend Throwable class except runtime execption and error are called checked exception. Checked exception must either declare the exception using throws keyword or surrounded by appropriate try/catch. E.G ClassNotFoundException
+ * **Unchecked Exception:** These execptions are not checked during thr compile time by the compiler. The compiler does not force to handle these exceptions which includes . 1) Arithmetic Exception  2) ArrayIndexOutOfBounds Exception
 
+### 29. What are different ways to handle exception ?
+* **Using try/Catch:**
+* The risky code is surrounded by try block. If an exception occurs then it is caught by catch block which is followed by try block.
+  ![image](https://github.com/user-attachments/assets/1c25f444-66da-45b3-ac24-3090eae90cac)
+  
+* **By declaring throws keyword:**
+  ![image](https://github.com/user-attachments/assets/badee970-83c4-4dc0-85a2-06251edb62dc)
+  
+### 30. What is Thread.
+* In Java, the flow of execution is called Thread. Every java program has at least one thread called the main thread, the main thread is created by JVM. The user can define their own threads by extending the Thread Class or implementing the runnable interface. Threads are executed concurrently.
+  ![image](https://github.com/user-attachments/assets/859e90ef-13a0-4ab5-83b5-12ed2e148689)
+
+### 31. How do you make a thread in java?
+ * **Extend Thread class:**
+ * Extending a thread class and override the run method. The thread is available in java.lang.thread.
+ * The disadvantage of using a thread class is that we can not extend any other classes because we have already extended the thread class. we can overload the run() method in our class.
+ * **Implement Runnable Interface:**
+ * Another way is by implementing the runnable interface. For that, We should provide the implementation for run() method which is defined in the interface.
+   ![image](https://github.com/user-attachments/assets/306b41ea-ac1f-45fb-a7a2-f1f568b1022f)
+
+ ### 32. Explain about join() method.
+ * Join method() is used to join one thread with the end of the currently running thread.
+   ![image](https://github.com/user-attachments/assets/225d0271-1af3-4210-97e5-4e741f3e5379)
+* Based on the above code, the main method has started the execution. When it reaches the code t.start() then 'thread t' starts the own stacks for the execution. JVM Switches b/w the main thread and ' thread t'.
+* Once it reaches the code t.join() then 'thread t' alone is executed and completes its task then only the main thread start the execution.
+* It is non-static method . The join() method has an overloaded version. So we can mention the time duration in join() method also ".s".
+
+ 
+i
